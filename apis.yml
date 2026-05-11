@@ -1,0 +1,68 @@
+aid: citrix-sharefile
+name: Citrix ShareFile
+description: >-
+  ShareFile (now part of Progress Software) is a secure document workflow and
+  file sharing platform that lets teams share files, collect e-signatures,
+  request data from clients, and automate document-centric workflows. The
+  ShareFile v3 REST API provides programmatic access to items, folders,
+  files, users, groups, shares, capabilities, and workflows in a customer
+  subdomain, secured with OAuth 2.0.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - File Sharing
+  - Document Workflow
+  - Secure File Transfer
+  - E-Signature
+  - Client Portal
+  - Content Collaboration
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/citrix-sharefile/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: citrix-sharefile:rest-api-v3
+    name: ShareFile REST API v3
+    description: >-
+      REST API for ShareFile providing access to items, folders, files,
+      users, groups, shares, devices, accounts, and workflows. Authentication
+      uses OAuth 2.0 with multiple supported grant types including
+      authorization code, password, and SAML assertion exchange, returning
+      Bearer access tokens scoped to a customer subdomain.
+    humanURL: https://api.sharefile.com/
+    baseURL: https://{subdomain}.sf-api.com/sf/v3
+    tags:
+      - Files
+      - Folders
+      - Items
+      - Users
+      - Groups
+      - Shares
+      - OAuth 2.0
+    properties:
+      - type: Documentation
+        url: https://api.sharefile.com/
+      - type: REST Reference
+        url: https://api.sharefile.com/rest
+      - type: .NET SDK
+        url: https://github.com/citrix/ShareFile-NET
+      - type: Objective-C SDK
+        url: https://github.com/citrix/ShareFile-ObjectiveC
+
+common:
+  - type: Website
+    url: https://www.sharefile.com
+  - type: Documentation
+    url: https://api.sharefile.com/
+  - type: Pricing
+    url: https://www.sharefile.com/plans
+  - type: Sign Up
+    url: https://www.sharefile.com/plans
+  - type: Community
+    url: https://community.sharefilesupport.com/
+  - type: Parent Company
+    url: https://www.progress.com
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
