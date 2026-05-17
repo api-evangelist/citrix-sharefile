@@ -57,7 +57,7 @@ common:
     url: https://api.sharefile.com/
   - type: Pricing
     url: https://www.sharefile.com/plans
-  - type: Sign Up
+  - type: SignUp
     url: https://www.sharefile.com/plans
   - type: Community
     url: https://community.sharefilesupport.com/
