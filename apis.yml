@@ -51,6 +51,8 @@ apis:
         url: https://github.com/citrix/ShareFile-ObjectiveC
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/citrix-sharefile
   - type: Website
     url: https://www.sharefile.com
   - type: Documentation
