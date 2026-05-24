@@ -65,6 +65,8 @@ common:
     url: https://community.sharefilesupport.com/
   - type: Parent Company
     url: https://www.progress.com
+  - type: LLMsTxt
+    url: https://api.sharefile.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
