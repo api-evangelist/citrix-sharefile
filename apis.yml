@@ -59,13 +59,13 @@ common:
     url: https://api.sharefile.com/
   - type: Pricing
     url: https://www.sharefile.com/plans
-  - type: SignUp
+  - type: Signup
     url: https://www.sharefile.com/plans
   - type: Community
     url: https://community.sharefilesupport.com/
   - type: Parent Company
     url: https://www.progress.com
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://api.sharefile.com/llms.txt
 maintainers:
   - FN: Kin Lane
