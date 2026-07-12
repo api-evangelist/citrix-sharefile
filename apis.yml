@@ -51,6 +51,12 @@ apis:
         url: https://github.com/citrix/ShareFile-ObjectiveC
 
 common:
+  - type: TrustCenter
+    url: security/citrix-sharefile-trust-center.yml
+  - type: DomainSecurity
+    url: security/citrix-sharefile-domain-security.yml
+  - type: Authentication
+    url: authentication/citrix-sharefile-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/showcase/citrix-sharefile
   - type: Website
