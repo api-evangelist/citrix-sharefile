@@ -51,6 +51,8 @@ apis:
         url: https://github.com/citrix/ShareFile-ObjectiveC
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/citrix-sharefile-agentic-access.yml
   - type: TrustCenter
     url: security/citrix-sharefile-trust-center.yml
   - type: DomainSecurity
