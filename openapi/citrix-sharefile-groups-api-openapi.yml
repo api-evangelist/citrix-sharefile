@@ -1,0 +1,134 @@
+openapi: 3.1.0
+info:
+  title: Citrix ShareFile REST API v3 Accounts Groups API
+  description: 'The ShareFile v3 REST API provides programmatic access to items,
+
+    folders, files, users, groups, shares, and accounts in a customer
+
+    subdomain. The API uses a subset of the OData specification with
+
+    entity URIs of the form /sf/v3/{Entity}({id}). Authentication uses
+
+    OAuth 2.0 with multiple supported grant types (authorization code,
+
+    password, SAML assertion exchange), returning Bearer access tokens
+
+    scoped to a customer subdomain.
+
+    '
+  version: 3.0.0
+  contact:
+    name: ShareFile API Documentation
+    url: https://api.sharefile.com/
+servers:
+- url: https://{subdomain}.sf-api.com/sf/v3
+  variables:
+    subdomain:
+      default: example
+      description: ShareFile account subdomain
+security:
+- bearerAuth: []
+tags:
+- name: Groups
+paths:
+  /Groups:
+    get:
+      tags:
+      - Groups
+      summary: List groups in the account
+      operationId: getGroups
+      responses:
+        '200':
+          description: A page of groups
+    post:
+      tags:
+      - Groups
+      summary: Create a group
+      operationId: createGroup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Group'
+      responses:
+        '201':
+          description: Created group
+  /Groups({id}):
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Groups
+      summary: Get a group
+      operationId: getGroup
+      responses:
+        '200':
+          description: A group
+    patch:
+      tags:
+      - Groups
+      summary: Update a group
+      operationId: updateGroup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Group'
+      responses:
+        '200':
+          description: Updated group
+    delete:
+      tags:
+      - Groups
+      summary: Delete a group
+      operationId: deleteGroup
+      responses:
+        '204':
+          description: Deleted
+components:
+  schemas:
+    Group:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        Account:
+          type: object
+          properties:
+            Id:
+              type: string
+        Owner:
+          type: object
+          properties:
+            Id:
+              type: string
+        Contacts:
+          type: array
+          items:
+            type: object
+            properties:
+              Id:
+                type: string
+              Email:
+                type: string
+                format: email
+        IsShared:
+          type: boolean
+        NumberOfContacts:
+          type: integer
+        url:
+          type: string
+          format: uri
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth2-Access-Token

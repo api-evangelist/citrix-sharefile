@@ -1,0 +1,297 @@
+openapi: 3.1.0
+info:
+  title: Citrix ShareFile REST API v3 Accounts Items API
+  description: 'The ShareFile v3 REST API provides programmatic access to items,
+
+    folders, files, users, groups, shares, and accounts in a customer
+
+    subdomain. The API uses a subset of the OData specification with
+
+    entity URIs of the form /sf/v3/{Entity}({id}). Authentication uses
+
+    OAuth 2.0 with multiple supported grant types (authorization code,
+
+    password, SAML assertion exchange), returning Bearer access tokens
+
+    scoped to a customer subdomain.
+
+    '
+  version: 3.0.0
+  contact:
+    name: ShareFile API Documentation
+    url: https://api.sharefile.com/
+servers:
+- url: https://{subdomain}.sf-api.com/sf/v3
+  variables:
+    subdomain:
+      default: example
+      description: ShareFile account subdomain
+security:
+- bearerAuth: []
+tags:
+- name: Items
+paths:
+  /Items:
+    get:
+      tags:
+      - Items
+      summary: List root-level items the user has access to
+      operationId: getRootItem
+      responses:
+        '200':
+          description: Item collection
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Item'
+  /Items({id}):
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Items
+      summary: Get an item by id
+      operationId: getItem
+      parameters:
+      - in: query
+        name: $select
+        schema:
+          type: string
+      - in: query
+        name: $expand
+        schema:
+          type: string
+      responses:
+        '200':
+          description: An item
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+    patch:
+      tags:
+      - Items
+      summary: Update an item (rename, move)
+      operationId: updateItem
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Item'
+      responses:
+        '200':
+          description: Updated item
+    delete:
+      tags:
+      - Items
+      summary: Delete an item
+      operationId: deleteItem
+      parameters:
+      - in: query
+        name: singleversion
+        schema:
+          type: boolean
+      - in: query
+        name: forceSync
+        schema:
+          type: boolean
+      responses:
+        '204':
+          description: Deleted
+  /Items({id})/Children:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Items
+      summary: List child items of a folder
+      operationId: getItemChildren
+      parameters:
+      - in: query
+        name: includeDeleted
+        schema:
+          type: boolean
+      - in: query
+        name: $skip
+        schema:
+          type: integer
+      - in: query
+        name: $top
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Child items
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Item'
+    post:
+      tags:
+      - Items
+      summary: Create a new folder or file metadata under a parent item
+      operationId: createItem
+      parameters:
+      - in: query
+        name: overwrite
+        schema:
+          type: boolean
+      - in: query
+        name: passthrough
+        schema:
+          type: boolean
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Item'
+      responses:
+        '201':
+          description: Created item
+  /Items({id})/Download:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Items
+      summary: Download an item's content
+      operationId: downloadItem
+      parameters:
+      - in: query
+        name: includeAllVersions
+        schema:
+          type: boolean
+      - in: query
+        name: redirect
+        schema:
+          type: boolean
+      responses:
+        '302':
+          description: Redirect to a download URL
+        '200':
+          description: File content
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+  /Items({id})/Upload:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Items
+      summary: Request an upload specification for a parent folder
+      operationId: requestUpload
+      parameters:
+      - in: query
+        name: method
+        schema:
+          type: string
+          enum:
+          - standard
+          - streamed
+          - threaded
+      - in: query
+        name: fileName
+        schema:
+          type: string
+      - in: query
+        name: fileSize
+        schema:
+          type: integer
+      - in: query
+        name: overwrite
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Upload specification
+components:
+  schemas:
+    Item:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        FileName:
+          type: string
+        FileSizeInKB:
+          type: integer
+        FileSizeBytes:
+          type: integer
+        Hash:
+          type: string
+        Path:
+          type: string
+        CreatorFirstName:
+          type: string
+        CreatorLastName:
+          type: string
+        CreationDate:
+          type: string
+          format: date-time
+        ProgenyEditDate:
+          type: string
+          format: date-time
+        Description:
+          type: string
+        Parent:
+          type: object
+          properties:
+            Id:
+              type: string
+        DiskSpaceLimit:
+          type: integer
+        IsHidden:
+          type: boolean
+        BandwidthLimitInMB:
+          type: integer
+        Owner:
+          type: object
+          properties:
+            Id:
+              type: string
+        Zone:
+          type: object
+          properties:
+            Id:
+              type: string
+        url:
+          type: string
+          format: uri
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth2-Access-Token
