@@ -8,7 +8,19 @@ description: >-
   files, users, groups, shares, capabilities, and workflows in a customer
   subdomain, secured with OAuth 2.0.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/citrix-sharefile.png
 tags:
   - File Sharing
   - Document Workflow
@@ -22,34 +34,92 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: citrix-sharefile:rest-api-v3
-    name: ShareFile REST API v3
-    description: >-
-      REST API for ShareFile providing access to items, folders, files,
-      users, groups, shares, devices, accounts, and workflows. Authentication
-      uses OAuth 2.0 with multiple supported grant types including
-      authorization code, password, and SAML assertion exchange, returning
-      Bearer access tokens scoped to a customer subdomain.
-    humanURL: https://api.sharefile.com/
-    baseURL: https://{subdomain}.sf-api.com/sf/v3
-    tags:
-      - Files
-      - Folders
-      - Items
-      - Users
-      - Groups
-      - Shares
-      - OAuth 2.0
-    properties:
-      - type: Documentation
-        url: https://api.sharefile.com/
-      - type: REST Reference
-        url: https://api.sharefile.com/rest
-      - type: .NET SDK
-        url: https://github.com/citrix/ShareFile-NET
-      - type: Objective-C SDK
-        url: https://github.com/citrix/ShareFile-ObjectiveC
-
+- aid: citrix-sharefile:rest-api-v3
+  name: ShareFile REST API v3
+  description: >-
+    REST API for ShareFile providing access to items, folders, files, users, groups, shares, devices,
+    accounts, and workflows. Authentication uses OAuth 2.0 with multiple supported grant types including
+    authorization code, password, and SAML assertion exchange, returning Bearer access tokens scoped to
+    a customer subdomain.
+  humanURL: https://api.sharefile.com/
+  baseURL: https://{subdomain}.sf-api.com/sf/v3
+  tags:
+  - Files
+  - Folders
+  - Items
+  - Users
+  - Groups
+  - Shares
+  - OAuth 2.0
+  properties:
+  - type: Documentation
+    url: https://api.sharefile.com/
+  - type: REST Reference
+    url: https://api.sharefile.com/rest
+  - type: .NET SDK
+    url: https://github.com/citrix/ShareFile-NET
+  - type: Objective-C SDK
+    url: https://github.com/citrix/ShareFile-ObjectiveC
+- aid: citrix-sharefile:citrix-sharefile-accounts-api
+  name: Citrix ShareFile Accounts API
+  description: The Accounts API from Citrix ShareFile — 1 operation(s) for accounts.
+  humanURL: https://api.sharefile.com/
+  baseURL: https://{subdomain}.sf-api.com/sf/v3
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/citrix-sharefile-accounts-api-openapi.yml
+- aid: citrix-sharefile:citrix-sharefile-groups-api
+  name: Citrix ShareFile Groups API
+  description: The Groups API from Citrix ShareFile — 2 operation(s) for groups.
+  humanURL: https://api.sharefile.com/
+  baseURL: https://{subdomain}.sf-api.com/sf/v3
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/citrix-sharefile-groups-api-openapi.yml
+- aid: citrix-sharefile:citrix-sharefile-items-api
+  name: Citrix ShareFile Items API
+  description: The Items API from Citrix ShareFile — 5 operation(s) for items.
+  humanURL: https://api.sharefile.com/
+  baseURL: https://{subdomain}.sf-api.com/sf/v3
+  tags:
+  - Items
+  properties:
+  - type: OpenAPI
+    url: openapi/citrix-sharefile-items-api-openapi.yml
+- aid: citrix-sharefile:citrix-sharefile-sessions-api
+  name: Citrix ShareFile Sessions API
+  description: The Sessions API from Citrix ShareFile — 1 operation(s) for sessions.
+  humanURL: https://api.sharefile.com/
+  baseURL: https://{subdomain}.sf-api.com/sf/v3
+  tags:
+  - Sessions
+  properties:
+  - type: OpenAPI
+    url: openapi/citrix-sharefile-sessions-api-openapi.yml
+- aid: citrix-sharefile:citrix-sharefile-shares-api
+  name: Citrix ShareFile Shares API
+  description: The Shares API from Citrix ShareFile — 2 operation(s) for shares.
+  humanURL: https://api.sharefile.com/
+  baseURL: https://{subdomain}.sf-api.com/sf/v3
+  tags:
+  - Shares
+  properties:
+  - type: OpenAPI
+    url: openapi/citrix-sharefile-shares-api-openapi.yml
+- aid: citrix-sharefile:citrix-sharefile-users-api
+  name: Citrix ShareFile Users API
+  description: The Users API from Citrix ShareFile — 2 operation(s) for users.
+  humanURL: https://api.sharefile.com/
+  baseURL: https://{subdomain}.sf-api.com/sf/v3
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/citrix-sharefile-users-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/citrix-sharefile-agentic-access.yml
