@@ -1,0 +1,24 @@
+{
+  "provider": "citrix-sharefile",
+  "sources": [
+    "citrix-sharefile-accounts-api-openapi.yml",
+    "citrix-sharefile-groups-api-openapi.yml",
+    "citrix-sharefile-items-api-openapi.yml",
+    "citrix-sharefile-sessions-api-openapi.yml",
+    "citrix-sharefile-shares-api-openapi.yml",
+    "citrix-sharefile-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "citrix-sharefile-accounts-api-openapi.yml",
+    "citrix-sharefile-groups-api-openapi.yml",
+    "citrix-sharefile-items-api-openapi.yml",
+    "citrix-sharefile-sessions-api-openapi.yml",
+    "citrix-sharefile-shares-api-openapi.yml",
+    "citrix-sharefile-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
