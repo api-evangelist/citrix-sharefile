@@ -32,7 +32,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/citrix-sharefile/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-11'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: citrix-sharefile:rest-api-v3
   name: ShareFile REST API v3
