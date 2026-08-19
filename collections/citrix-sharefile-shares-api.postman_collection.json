@@ -1,0 +1,399 @@
+{
+  "item": [
+    {
+      "id": "d1bc0c90-612b-4eb5-a789-b7a5576df617",
+      "name": "Shares",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "06f6457d-e9b1-4c22-8aeb-82654fdadb1d",
+          "name": "List shares",
+          "request": {
+            "name": "List shares",
+            "description": {},
+            "url": {
+              "path": [
+                "Shares"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7350c939-06a6-4d3a-86f8-ac178f597b88",
+              "name": "A page of shares",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Shares"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b9cc7680-9d2e-415a-ab44-77d72fc8b784",
+          "name": "Create a share",
+          "request": {
+            "name": "Create a share",
+            "description": {},
+            "url": {
+              "path": [
+                "Shares"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Id\": \"<string>\",\n  \"ShareType\": \"<string>\",\n  \"Title\": \"<string>\",\n  \"Items\": [\n    {\n      \"Id\": \"<string>\"\n    },\n    {\n      \"Id\": \"<string>\"\n    }\n  ],\n  \"Recipients\": [\n    {\n      \"Id\": \"<string>\",\n      \"Email\": \"<email>\"\n    },\n    {\n      \"Id\": \"<string>\",\n      \"Email\": \"<email>\"\n    }\n  ],\n  \"HasSentMessage\": \"<boolean>\",\n  \"SentMessageTitle\": \"<string>\",\n  \"IsViewOnly\": \"<boolean>\",\n  \"RequireLogin\": \"<boolean>\",\n  \"RequireUserInfo\": \"<boolean>\",\n  \"Creator\": {\n    \"Id\": \"<string>\"\n  },\n  \"CreationDate\": \"<dateTime>\",\n  \"ExpirationDate\": \"<dateTime>\",\n  \"MaxDownloads\": \"<integer>\",\n  \"TotalDownloads\": \"<integer>\",\n  \"IsConsumed\": \"<boolean>\",\n  \"IsRead\": \"<boolean>\",\n  \"url\": \"<uri>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "992b134b-03e6-41ec-bda7-3da2c84ed3d2",
+              "name": "Created share",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Shares"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Id\": \"<string>\",\n  \"ShareType\": \"<string>\",\n  \"Title\": \"<string>\",\n  \"Items\": [\n    {\n      \"Id\": \"<string>\"\n    },\n    {\n      \"Id\": \"<string>\"\n    }\n  ],\n  \"Recipients\": [\n    {\n      \"Id\": \"<string>\",\n      \"Email\": \"<email>\"\n    },\n    {\n      \"Id\": \"<string>\",\n      \"Email\": \"<email>\"\n    }\n  ],\n  \"HasSentMessage\": \"<boolean>\",\n  \"SentMessageTitle\": \"<string>\",\n  \"IsViewOnly\": \"<boolean>\",\n  \"RequireLogin\": \"<boolean>\",\n  \"RequireUserInfo\": \"<boolean>\",\n  \"Creator\": {\n    \"Id\": \"<string>\"\n  },\n  \"CreationDate\": \"<dateTime>\",\n  \"ExpirationDate\": \"<dateTime>\",\n  \"MaxDownloads\": \"<integer>\",\n  \"TotalDownloads\": \"<integer>\",\n  \"IsConsumed\": \"<boolean>\",\n  \"IsRead\": \"<boolean>\",\n  \"url\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3c3c2e2d-5399-4383-825c-9b42c25f87ab",
+          "name": "Get a share",
+          "request": {
+            "name": "Get a share",
+            "description": {},
+            "url": {
+              "path": [
+                "Shares({{id}})"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2a9c4ce2-af52-4760-a0c0-deac979da5a0",
+              "name": "A share",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Shares({{id}})"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "99d86576-f415-4aea-8267-c48bae609523",
+          "name": "Delete a share",
+          "request": {
+            "name": "Delete a share",
+            "description": {},
+            "url": {
+              "path": [
+                "Shares({{id}})"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "adf54c92-3cb4-4d43-8d80-83d7b45167e8",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Shares({{id}})"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "ShareFile account subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "subdomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{subdomain}}.sf-api.com/sf/v3",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "id"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0a841567-0a2c-4606-a716-ce4f46f53d31",
+    "name": "Citrix ShareFile REST API v3 Accounts Shares API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ShareFile v3 REST API provides programmatic access to items,\nfolders, files, users, groups, shares, and accounts in a customer\nsubdomain. The API uses a subset of the OData specification with\nentity URIs of the form /sf/v3/{Entity}({id}). Authentication uses\nOAuth 2.0 with multiple supported grant types (authorization code,\npassword, SAML assertion exchange), returning Bearer access tokens\nscoped to a customer subdomain.\n\n\nContact Support:\n Name: ShareFile API Documentation",
+      "type": "text/plain"
+    }
+  }
+}

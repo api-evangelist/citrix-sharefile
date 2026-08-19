@@ -1,0 +1,989 @@
+{
+  "item": [
+    {
+      "id": "5f7ebee7-bf28-4d0d-a7bc-e794fc732f34",
+      "name": "Items",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fecc74c8-8698-4166-84ea-4a1ae36d7be9",
+          "name": "List root-level items the user has access to",
+          "request": {
+            "name": "List root-level items the user has access to",
+            "description": {},
+            "url": {
+              "path": [
+                "Items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eb328221-e280-441a-bbad-3b4946c5a33f",
+              "name": "Item collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"value\": [\n    {\n      \"Id\": \"string\",\n      \"Name\": \"string\",\n      \"FileName\": \"string\",\n      \"FileSizeInKB\": 2684,\n      \"FileSizeBytes\": 1350,\n      \"Hash\": \"string\",\n      \"Path\": \"string\",\n      \"CreatorFirstName\": \"string\",\n      \"CreatorLastName\": \"string\",\n      \"CreationDate\": \"2026-07-05T01:43:23.358Z\",\n      \"ProgenyEditDate\": \"1977-02-26T11:33:48.010Z\",\n      \"Description\": \"string\",\n      \"Parent\": {\n        \"Id\": \"string\"\n      },\n      \"DiskSpaceLimit\": 3454,\n      \"IsHidden\": false,\n      \"BandwidthLimitInMB\": 1704,\n      \"Owner\": {\n        \"Id\": \"string\"\n      },\n      \"Zone\": {\n        \"Id\": \"string\"\n      },\n      \"url\": \"http://PI.mjmaX2UHlCEUoKFnjekZfcwk3DibgUrp6fwy2buIaBZfJr5o\"\n    },\n    {\n      \"Id\": \"string\",\n      \"Name\": \"string\",\n      \"FileName\": \"string\",\n      \"FileSizeInKB\": 9273,\n      \"FileSizeBytes\": 2756,\n      \"Hash\": \"string\",\n      \"Path\": \"string\",\n      \"CreatorFirstName\": \"string\",\n      \"CreatorLastName\": \"string\",\n      \"CreationDate\": \"1983-04-06T10:13:15.323Z\",\n      \"ProgenyEditDate\": \"2002-08-15T00:14:23.302Z\",\n      \"Description\": \"string\",\n      \"Parent\": {\n        \"Id\": \"string\"\n      },\n      \"DiskSpaceLimit\": 1189,\n      \"IsHidden\": true,\n      \"BandwidthLimitInMB\": 7901,\n      \"Owner\": {\n        \"Id\": \"string\"\n      },\n      \"Zone\": {\n        \"Id\": \"string\"\n      },\n      \"url\": \"https://qvrSNyhwPSaA.pawMjcgmycRCFJjsL.Ih56qWgSVEnhUbvi-FgkSxj7D\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d5db2abf-1f39-4ed1-a89b-8bad4367ae17",
+          "name": "Get an item by id",
+          "request": {
+            "name": "Get an item by id",
+            "description": {},
+            "url": {
+              "path": [
+                "Items({{id}})"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$select",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$expand",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "953ebc00-5f63-4be0-b585-898439c3d0d5",
+              "name": "An item",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Items({{id}})"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$select",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "$expand",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Id\": \"string\",\n  \"Name\": \"string\",\n  \"FileName\": \"string\",\n  \"FileSizeInKB\": 9311,\n  \"FileSizeBytes\": 5036,\n  \"Hash\": \"string\",\n  \"Path\": \"string\",\n  \"CreatorFirstName\": \"string\",\n  \"CreatorLastName\": \"string\",\n  \"CreationDate\": \"1996-12-24T02:46:33.873Z\",\n  \"ProgenyEditDate\": \"1968-04-09T23:04:42.353Z\",\n  \"Description\": \"string\",\n  \"Parent\": {\n    \"Id\": \"string\"\n  },\n  \"DiskSpaceLimit\": 8950,\n  \"IsHidden\": true,\n  \"BandwidthLimitInMB\": 1025,\n  \"Owner\": {\n    \"Id\": \"string\"\n  },\n  \"Zone\": {\n    \"Id\": \"string\"\n  },\n  \"url\": \"https://RBSpmalngbMxFH.tqrOvm\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6bb3824f-648a-4178-95cf-c5f57a73ac08",
+          "name": "Update an item (rename, move)",
+          "request": {
+            "name": "Update an item (rename, move)",
+            "description": {},
+            "url": {
+              "path": [
+                "Items({{id}})"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Id\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"FileName\": \"<string>\",\n  \"FileSizeInKB\": \"<integer>\",\n  \"FileSizeBytes\": \"<integer>\",\n  \"Hash\": \"<string>\",\n  \"Path\": \"<string>\",\n  \"CreatorFirstName\": \"<string>\",\n  \"CreatorLastName\": \"<string>\",\n  \"CreationDate\": \"<dateTime>\",\n  \"ProgenyEditDate\": \"<dateTime>\",\n  \"Description\": \"<string>\",\n  \"Parent\": {\n    \"Id\": \"<string>\"\n  },\n  \"DiskSpaceLimit\": \"<integer>\",\n  \"IsHidden\": \"<boolean>\",\n  \"BandwidthLimitInMB\": \"<integer>\",\n  \"Owner\": {\n    \"Id\": \"<string>\"\n  },\n  \"Zone\": {\n    \"Id\": \"<string>\"\n  },\n  \"url\": \"<uri>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9403f230-d309-41be-9be0-826cfa60b6b3",
+              "name": "Updated item",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Items({{id}})"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Id\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"FileName\": \"<string>\",\n  \"FileSizeInKB\": \"<integer>\",\n  \"FileSizeBytes\": \"<integer>\",\n  \"Hash\": \"<string>\",\n  \"Path\": \"<string>\",\n  \"CreatorFirstName\": \"<string>\",\n  \"CreatorLastName\": \"<string>\",\n  \"CreationDate\": \"<dateTime>\",\n  \"ProgenyEditDate\": \"<dateTime>\",\n  \"Description\": \"<string>\",\n  \"Parent\": {\n    \"Id\": \"<string>\"\n  },\n  \"DiskSpaceLimit\": \"<integer>\",\n  \"IsHidden\": \"<boolean>\",\n  \"BandwidthLimitInMB\": \"<integer>\",\n  \"Owner\": {\n    \"Id\": \"<string>\"\n  },\n  \"Zone\": {\n    \"Id\": \"<string>\"\n  },\n  \"url\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "053511bf-2a01-4c0c-8d7c-8d9834d444bc",
+          "name": "Delete an item",
+          "request": {
+            "name": "Delete an item",
+            "description": {},
+            "url": {
+              "path": [
+                "Items({{id}})"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "singleversion",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "forceSync",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e30844ff-8030-43f2-b1f9-ecd51d66cef7",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Items({{id}})"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "singleversion",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "forceSync",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a9009049-b795-4563-8c05-b9b549c49eac",
+          "name": "List child items of a folder",
+          "request": {
+            "name": "List child items of a folder",
+            "description": {},
+            "url": {
+              "path": [
+                "Items({{id}})",
+                "Children"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "includeDeleted",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$skip",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3c6b528f-c2fe-4c81-b6df-2e791756db31",
+              "name": "Child items",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Items({{id}})",
+                    "Children"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "includeDeleted",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "$skip",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$top",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"value\": [\n    {\n      \"Id\": \"string\",\n      \"Name\": \"string\",\n      \"FileName\": \"string\",\n      \"FileSizeInKB\": 2684,\n      \"FileSizeBytes\": 1350,\n      \"Hash\": \"string\",\n      \"Path\": \"string\",\n      \"CreatorFirstName\": \"string\",\n      \"CreatorLastName\": \"string\",\n      \"CreationDate\": \"2026-07-05T01:43:23.358Z\",\n      \"ProgenyEditDate\": \"1977-02-26T11:33:48.010Z\",\n      \"Description\": \"string\",\n      \"Parent\": {\n        \"Id\": \"string\"\n      },\n      \"DiskSpaceLimit\": 3454,\n      \"IsHidden\": false,\n      \"BandwidthLimitInMB\": 1704,\n      \"Owner\": {\n        \"Id\": \"string\"\n      },\n      \"Zone\": {\n        \"Id\": \"string\"\n      },\n      \"url\": \"http://PI.mjmaX2UHlCEUoKFnjekZfcwk3DibgUrp6fwy2buIaBZfJr5o\"\n    },\n    {\n      \"Id\": \"string\",\n      \"Name\": \"string\",\n      \"FileName\": \"string\",\n      \"FileSizeInKB\": 9273,\n      \"FileSizeBytes\": 2756,\n      \"Hash\": \"string\",\n      \"Path\": \"string\",\n      \"CreatorFirstName\": \"string\",\n      \"CreatorLastName\": \"string\",\n      \"CreationDate\": \"1983-04-06T10:13:15.323Z\",\n      \"ProgenyEditDate\": \"2002-08-15T00:14:23.302Z\",\n      \"Description\": \"string\",\n      \"Parent\": {\n        \"Id\": \"string\"\n      },\n      \"DiskSpaceLimit\": 1189,\n      \"IsHidden\": true,\n      \"BandwidthLimitInMB\": 7901,\n      \"Owner\": {\n        \"Id\": \"string\"\n      },\n      \"Zone\": {\n        \"Id\": \"string\"\n      },\n      \"url\": \"https://qvrSNyhwPSaA.pawMjcgmycRCFJjsL.Ih56qWgSVEnhUbvi-FgkSxj7D\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "63fce821-9aba-4497-9a1e-ac9a7450bb41",
+          "name": "Create a new folder or file metadata under a parent item",
+          "request": {
+            "name": "Create a new folder or file metadata under a parent item",
+            "description": {},
+            "url": {
+              "path": [
+                "Items({{id}})",
+                "Children"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "overwrite",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "passthrough",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Id\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"FileName\": \"<string>\",\n  \"FileSizeInKB\": \"<integer>\",\n  \"FileSizeBytes\": \"<integer>\",\n  \"Hash\": \"<string>\",\n  \"Path\": \"<string>\",\n  \"CreatorFirstName\": \"<string>\",\n  \"CreatorLastName\": \"<string>\",\n  \"CreationDate\": \"<dateTime>\",\n  \"ProgenyEditDate\": \"<dateTime>\",\n  \"Description\": \"<string>\",\n  \"Parent\": {\n    \"Id\": \"<string>\"\n  },\n  \"DiskSpaceLimit\": \"<integer>\",\n  \"IsHidden\": \"<boolean>\",\n  \"BandwidthLimitInMB\": \"<integer>\",\n  \"Owner\": {\n    \"Id\": \"<string>\"\n  },\n  \"Zone\": {\n    \"Id\": \"<string>\"\n  },\n  \"url\": \"<uri>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "faf36a4b-c8fa-4d3e-83ba-259b3baa5ef1",
+              "name": "Created item",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Items({{id}})",
+                    "Children"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "overwrite",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "passthrough",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Id\": \"<string>\",\n  \"Name\": \"<string>\",\n  \"FileName\": \"<string>\",\n  \"FileSizeInKB\": \"<integer>\",\n  \"FileSizeBytes\": \"<integer>\",\n  \"Hash\": \"<string>\",\n  \"Path\": \"<string>\",\n  \"CreatorFirstName\": \"<string>\",\n  \"CreatorLastName\": \"<string>\",\n  \"CreationDate\": \"<dateTime>\",\n  \"ProgenyEditDate\": \"<dateTime>\",\n  \"Description\": \"<string>\",\n  \"Parent\": {\n    \"Id\": \"<string>\"\n  },\n  \"DiskSpaceLimit\": \"<integer>\",\n  \"IsHidden\": \"<boolean>\",\n  \"BandwidthLimitInMB\": \"<integer>\",\n  \"Owner\": {\n    \"Id\": \"<string>\"\n  },\n  \"Zone\": {\n    \"Id\": \"<string>\"\n  },\n  \"url\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fc69cb77-c1bb-4008-a696-27d0d902d393",
+          "name": "Download an item's content",
+          "request": {
+            "name": "Download an item's content",
+            "description": {},
+            "url": {
+              "path": [
+                "Items({{id}})",
+                "Download"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "includeAllVersions",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "redirect",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "39241cd5-0693-48e3-8884-d14b236dc7d4",
+              "name": "File content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Items({{id}})",
+                    "Download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "includeAllVersions",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "redirect",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cc06458e-a6fc-457c-bc96-ae107175f594",
+              "name": "Redirect to a download URL",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Items({{id}})",
+                    "Download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "includeAllVersions",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "redirect",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Found",
+              "code": 302,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "362fef03-78c5-4bb1-8502-e7da9f30582b",
+          "name": "Request an upload specification for a parent folder",
+          "request": {
+            "name": "Request an upload specification for a parent folder",
+            "description": {},
+            "url": {
+              "path": [
+                "Items({{id}})",
+                "Upload"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "method",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fileName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fileSize",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "overwrite",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ad445b4a-b3ed-4817-874e-e3ad617374e4",
+              "name": "Upload specification",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Items({{id}})",
+                    "Upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "method",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fileName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fileSize",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "overwrite",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "ShareFile account subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "subdomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{subdomain}}.sf-api.com/sf/v3",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "id"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ca6daa03-13bf-4d20-a56f-89fcf8f215a0",
+    "name": "Citrix ShareFile REST API v3 Accounts Items API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ShareFile v3 REST API provides programmatic access to items,\nfolders, files, users, groups, shares, and accounts in a customer\nsubdomain. The API uses a subset of the OData specification with\nentity URIs of the form /sf/v3/{Entity}({id}). Authentication uses\nOAuth 2.0 with multiple supported grant types (authorization code,\npassword, SAML assertion exchange), returning Bearer access tokens\nscoped to a customer subdomain.\n\n\nContact Support:\n Name: ShareFile API Documentation",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Citrix ShareFile REST API v3 Accounts Items API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List root-level items the user has access to",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.sf-api.com/sf/v3/Items"
+          },
+          "docs": "List root-level items the user has access to"
+        },
+        {
+          "info": {
+            "name": "Get an item by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.sf-api.com/sf/v3/Items(:id)",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "$select",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$expand",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get an item by id"
+        },
+        {
+          "info": {
+            "name": "Update an item (rename, move)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{subdomain}.sf-api.com/sf/v3/Items(:id)",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update an item (rename, move)"
+        },
+        {
+          "info": {
+            "name": "Delete an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{subdomain}.sf-api.com/sf/v3/Items(:id)",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "singleversion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "forceSync",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete an item"
+        },
+        {
+          "info": {
+            "name": "List child items of a folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.sf-api.com/sf/v3/Items(:id)/Children",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "includeDeleted",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List child items of a folder"
+        },
+        {
+          "info": {
+            "name": "Create a new folder or file metadata under a parent item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.sf-api.com/sf/v3/Items(:id)/Children",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "overwrite",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "passthrough",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new folder or file metadata under a parent item"
+        },
+        {
+          "info": {
+            "name": "Download an item's content",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.sf-api.com/sf/v3/Items(:id)/Download",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "includeAllVersions",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "redirect",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Download an item's content"
+        },
+        {
+          "info": {
+            "name": "Request an upload specification for a parent folder",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.sf-api.com/sf/v3/Items(:id)/Upload",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "method",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fileName",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fileSize",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "overwrite",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Request an upload specification for a parent folder"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,131 @@
+{
+  "item": [
+    {
+      "id": "d9941eda-5b36-406d-8188-54c145dc5b39",
+      "name": "Sessions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "296140f4-676e-4256-8895-8d9e37271036",
+          "name": "Authenticate (deprecated; prefer OAuth)",
+          "request": {
+            "name": "Authenticate (deprecated; prefer OAuth)",
+            "description": {},
+            "url": {
+              "path": [
+                "Sessions",
+                "Login"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "ShareFile account subdomain",
+                  "type": "any",
+                  "value": "{{subdomain}}",
+                  "key": "subdomain"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "95c2f102-9a91-477b-bf44-c51e6917dc94",
+              "name": "Session",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Sessions",
+                    "Login"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "ShareFile account subdomain",
+                      "type": "any",
+                      "value": "{{subdomain}}",
+                      "key": "subdomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "ShareFile account subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "subdomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{subdomain}}.sf-api.com/sf/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "cdc3665c-32a9-42c2-8d2b-3ebe5027272e",
+    "name": "Citrix ShareFile REST API v3 Accounts Sessions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ShareFile v3 REST API provides programmatic access to items,\nfolders, files, users, groups, shares, and accounts in a customer\nsubdomain. The API uses a subset of the OData specification with\nentity URIs of the form /sf/v3/{Entity}({id}). Authentication uses\nOAuth 2.0 with multiple supported grant types (authorization code,\npassword, SAML assertion exchange), returning Bearer access tokens\nscoped to a customer subdomain.\n\n\nContact Support:\n Name: ShareFile API Documentation",
+      "type": "text/plain"
+    }
+  }
+}

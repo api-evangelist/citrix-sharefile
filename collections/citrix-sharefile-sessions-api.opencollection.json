@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Citrix ShareFile REST API v3 Accounts Sessions API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sessions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Authenticate (deprecated; prefer OAuth)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.sf-api.com/sf/v3/Sessions/Login"
+          },
+          "docs": "Authenticate (deprecated; prefer OAuth)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
