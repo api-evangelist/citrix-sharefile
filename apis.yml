@@ -44,6 +44,14 @@ apis:
   humanURL: https://api.sharefile.com/
   baseURL: https://{subdomain}.sf-api.com/sf/v3
   tags:
+  - File
+  - Folders
+  - Item
+  - User
+  - Group
+  - Shares
+  - Authentication
+  tags_raw:
   - Files
   - Folders
   - Items
@@ -66,6 +74,8 @@ apis:
   humanURL: https://api.sharefile.com/
   baseURL: https://{subdomain}.sf-api.com/sf/v3
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -76,6 +86,8 @@ apis:
   humanURL: https://api.sharefile.com/
   baseURL: https://{subdomain}.sf-api.com/sf/v3
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -86,6 +98,8 @@ apis:
   humanURL: https://api.sharefile.com/
   baseURL: https://{subdomain}.sf-api.com/sf/v3
   tags:
+  - Item
+  tags_raw:
   - Items
   properties:
   - type: OpenAPI
@@ -116,6 +130,8 @@ apis:
   humanURL: https://api.sharefile.com/
   baseURL: https://{subdomain}.sf-api.com/sf/v3
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
