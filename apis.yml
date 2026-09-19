@@ -62,7 +62,7 @@ apis:
   - Item
   - User
   - Group
-  - Shares
+  - Share
   - Authentication
   tags_raw:
   - Files
@@ -133,6 +133,8 @@ apis:
   humanURL: https://api.sharefile.com/
   baseURL: https://{subdomain}.sf-api.com/sf/v3
   tags:
+  - Share
+  tags_raw:
   - Shares
   properties:
   - type: OpenAPI
