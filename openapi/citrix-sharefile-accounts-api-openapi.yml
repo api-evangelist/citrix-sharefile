@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Citrix ShareFile REST API v3 Accounts API
   description: 'The ShareFile v3 REST API provides programmatic access to items,
@@ -13,9 +13,7 @@ info:
 
     password, SAML assertion exchange), returning Bearer access tokens
 
-    scoped to a customer subdomain.
-
-    '
+    scoped to a customer subdomain.'
   version: 3.0.0
   contact:
     name: ShareFile API Documentation

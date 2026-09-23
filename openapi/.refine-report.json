@@ -1,12 +1,7 @@
 {
   "provider": "citrix-sharefile",
   "sources": [
-    "citrix-sharefile-accounts-api-openapi.yml",
-    "citrix-sharefile-groups-api-openapi.yml",
-    "citrix-sharefile-items-api-openapi.yml",
-    "citrix-sharefile-sessions-api-openapi.yml",
-    "citrix-sharefile-shares-api-openapi.yml",
-    "citrix-sharefile-users-api-openapi.yml"
+    "_original/citrix-sharefile-openapi.yml"
   ],
   "outputs": [
     "citrix-sharefile-accounts-api-openapi.yml",
@@ -19,6 +14,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "citrix-sharefile-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "citrix-sharefile-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "citrix-sharefile-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "citrix-sharefile-items-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "citrix-sharefile-sessions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "citrix-sharefile-shares-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "citrix-sharefile-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
