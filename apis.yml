@@ -152,6 +152,9 @@ apis:
   - type: OpenAPI
     url: openapi/citrix-sharefile-users-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/citrix-sharefile-capability-edges.yml
+    name: Citrix ShareFile Business Capability Map
   - type: AgenticAccess
     url: agentic-access/citrix-sharefile-agentic-access.yml
   - type: TrustCenter
