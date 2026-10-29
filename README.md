@@ -1,4 +1,4 @@
-# Citrix ShareFile (citrix-sharefile)
+# Citrix ShareFile
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,66 +66,110 @@
 
 ShareFile (now part of Progress Software) is a secure document workflow and file sharing platform that lets teams share files, collect e-signatures, request data from clients, and automate document-centric workflows. The ShareFile v3 REST API provides programmatic access to items, folders, files, users, groups, shares, capabilities, and workflows in a customer subdomain, secured with OAuth 2.0.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/citrix-sharefile/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/citrix-sharefile/refs/heads/main/apis.yml)
+**Areas:** File Sharing · Document Workflow · Secure File Transfer · E-Signature · Client Portal · Content Collaboration
 
-## Scope
+## Citrix ShareFile on APIs.io
 
-- **Type:** Index
+Everything profiled for Citrix ShareFile is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/citrix-sharefile/](https://apis.io/providers/citrix-sharefile/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- File Sharing
-- Document Workflow
-- Secure File Transfer
-- E-Signature
-- Client Portal
-- Content Collaboration
+- [ShareFile REST API v3](https://apis.io/apis/citrix-sharefile/rest-api-v3/) — REST API for ShareFile providing access to items, folders, files, users, groups, shares, devices, accounts, and workflows. Authentication uses OAuth 2.0…
+- [Citrix ShareFile Accounts API](https://apis.io/apis/citrix-sharefile/citrix-sharefile-accounts-api/) — The Accounts API from Citrix ShareFile — 1 operation(s) for accounts.
+- [Citrix ShareFile Groups API](https://apis.io/apis/citrix-sharefile/citrix-sharefile-groups-api/) — The Groups API from Citrix ShareFile — 2 operation(s) for groups.
+- [Citrix ShareFile Items API](https://apis.io/apis/citrix-sharefile/citrix-sharefile-items-api/) — The Items API from Citrix ShareFile — 5 operation(s) for items.
+- [Citrix ShareFile Sessions API](https://apis.io/apis/citrix-sharefile/citrix-sharefile-sessions-api/) — The Sessions API from Citrix ShareFile — 1 operation(s) for sessions.
+- [Citrix ShareFile Shares API](https://apis.io/apis/citrix-sharefile/citrix-sharefile-shares-api/) — The Shares API from Citrix ShareFile — 2 operation(s) for shares.
+- [Citrix ShareFile Users API](https://apis.io/apis/citrix-sharefile/citrix-sharefile-users-api/) — The Users API from Citrix ShareFile — 2 operation(s) for users.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### ShareFile REST API v3
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for ShareFile providing access to items, folders, files, users, groups, shares, devices, accounts, and workflows. Authentication uses OAuth 2.0 with multiple supported grant types including authorization code, password, and SAML assertion exchange, returning Bearer access tokens scoped to a customer subdomain.
+- [Citrix Sharefile Agentic Access](https://apis.io/agentic-access/citrix-sharefile/citrix-sharefile-agentic-access/)
 
-- **Human URL:** [https://api.sharefile.com/](https://api.sharefile.com/)
-- **Base URL:** `https://{subdomain}.sf-api.com/sf/v3`
+#### Collections (7)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Files
-- Folders
-- Items
-- Users
-- Groups
-- Shares
-- OAuth 2.0
+- [Citrix ShareFile REST API v3](https://apis.io/collections/citrix-sharefile/open-citrix-sharefile/)
+- [Citrix ShareFile REST API v3 Accounts API](https://apis.io/collections/citrix-sharefile/open-citrix-sharefile-accounts-api/)
+- [Citrix ShareFile REST API v3 Accounts Groups API](https://apis.io/collections/citrix-sharefile/open-citrix-sharefile-groups-api/)
+- [Citrix ShareFile REST API v3 Accounts Items API](https://apis.io/collections/citrix-sharefile/open-citrix-sharefile-items-api/)
+- [Citrix ShareFile REST API v3 Accounts Sessions API](https://apis.io/collections/citrix-sharefile/open-citrix-sharefile-sessions-api/)
+- [Citrix ShareFile REST API v3 Accounts Shares API](https://apis.io/collections/citrix-sharefile/open-citrix-sharefile-shares-api/)
+- [Citrix ShareFile REST API v3 Accounts Users API](https://apis.io/collections/citrix-sharefile/open-citrix-sharefile-users-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://api.sharefile.com/)
-- [R E S T  Reference](https://api.sharefile.com/rest)
-- [. N E T  S D K](https://github.com/citrix/ShareFile-NET)
-- [Objective- C  S D K](https://github.com/citrix/ShareFile-ObjectiveC)
-- [Postman Collection](collections/citrix-sharefile.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/citrix-sharefile.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Citrix Sharefile Authentication](https://apis.io/security/citrix-sharefile/citrix-sharefile-authentication/)
+- [Citrix Sharefile Domain Security](https://apis.io/security/citrix-sharefile/citrix-sharefile-domain-security/)
+- [Citrix Sharefile Trust Center](https://apis.io/security/citrix-sharefile/citrix-sharefile-trust-center/)
 
-- [LinkedIn](https://www.linkedin.com/showcase/citrix-sharefile)
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.sharefile.com)
 - [Documentation](https://api.sharefile.com/)
 - [Pricing](https://www.sharefile.com/plans)
-- [Sign Up](https://www.sharefile.com/plans)
-- [Community](https://community.sharefilesupport.com/)
-- [Parent  Company](https://www.progress.com)
-- [L L Ms Txt](https://api.sharefile.com/llms.txt)
+- [Blog](https://www.sharefile.com/blogs)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 30.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 31.6 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/citrix-sharefile/](https://apis.io/providers/citrix-sharefile/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Citrix ShareFile: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/citrix-sharefile/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
